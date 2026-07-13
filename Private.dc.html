@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
+</head>
+
+<body>
+  <x-dc>
+    <helmet>
+      <title>대관 — 르꼬숑 Le Cochon</title>
+      <meta name="description"
+        content="르꼬숑 대관 안내 — 기업 행사·돌잔치·와인 모임·스몰 웨딩. 통창 앞 롱테이블을 오롯이. 최소매출보장 기준 별도 대관료 없음. French Cuisine, une table à Seoul.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+      <style>
+        * {
+          box-sizing: border-box
+        }
+
+        html {
+          scroll-behavior: smooth
+        }
+
+        body {
+          margin: 0
+        }
+
+        a {
+          color: #B08D4F;
+          text-decoration: none
+        }
+
+        a:hover {
+          color: #8f7038
+        }
+
+        ::selection {
+          background: #20342A;
+          color: #F7F3EA
+        }
+      </style>
+    </helmet>
+
+    <div id="lc-root"
+      style="--bg:#F7F3EA;--deep:#20342A;--accent:#B08D4F;--fg:#2B2622;--muted:rgba(43,38,34,.60);--hair:rgba(32,52,42,.18);background:var(--bg);color:var(--fg);font-family:'Pretendard Variable',system-ui,sans-serif;font-size:17px;line-height:1.85;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden">
+
+      <nav id="lc-nav"
+        style="position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(32,52,42,0);transition:background .4s ease,border-color .4s ease">
+        <div
+          style="max-width:1180px;margin:0 auto;padding:14px clamp(22px,5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+          <a href="index.html" aria-label="Le Cochon" style="display:block;flex:none"><img src="imgs/le_cochon_logo.svg"
+              alt="Le Cochon" style="display:block;width:104px;height:auto" /></a>
+          <div
+            style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);flex-wrap:wrap;justify-content:flex-end">
+            <a href="index.html" style="color:var(--fg);font-size:14px;font-weight:500">홈</a>
+            <a href="Menu.dc.html" style="color:var(--fg);font-size:14px;font-weight:500">코스</a>
+            <a href="Wine.dc.html" style="color:var(--fg);font-size:14px;font-weight:500">와인</a>
+            <a href="https://app.catchtable.co.kr/ct/shop/lecochon" target="_blank" rel="noopener"
+              style="background:var(--deep);color:var(--bg);border-radius:100px;padding:11px 20px;font-size:13px;font-weight:600">캐치테이블</a>
+            <a href="https://m.booking.naver.com/booking/6/bizes/70637/items/3685525?theme=place&service-target=map-pc&lang=ko&area=pll"
+              target="_blank" rel="noopener"
+              style="border:1px solid rgba(43,38,34,.28);color:var(--fg);border-radius:100px;padding:11px 20px;font-size:13px;font-weight:600">네이버
+              예약</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HEADER -->
+      <header
+        style="max-width:1180px;margin:0 auto;padding:clamp(120px,15vh,168px) clamp(22px,5vw,80px) clamp(24px,4vw,48px)">
+        <div data-reveal
+          style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
+          Privatisation · <span
+            style="font-family:'Cormorant Garamond',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:15px">petit
+            mariage</span></div>
+        <h1 data-reveal
+          style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.22;letter-spacing:-.035em;font-size:clamp(40px,4.6vw,66px);margin:22px 0 0">
+          대관</h1>
+        <p data-reveal class="lead" style="max-width:44ch;margin:24px 0 0;color:var(--muted)">기업 행사와 돌잔치, 와인 모임, 그리고 스몰
+          웨딩까지.<br>통창 앞 롱테이블을 중심으로 공간을 오롯이 비워 드립니다.</p>
+      </header>
+
+      <!-- HERO BAND -->
+      <section style="max-width:1180px;margin:0 auto;padding:0 clamp(22px,5vw,80px)">
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,1.6vw,18px)">
+          <img data-reveal src="imgs/wedding-table-window.webp" alt="통창 앞 롱테이블 웨딩 세팅"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-flower-arch.webp" alt="화이트 플라워 오브제"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-bride-bouquet.webp" alt="부케를 든 신부"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
+        </div>
+      </section>
+
+      <!-- SMALL WEDDING -->
+      <section style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:center">
+          <div data-reveal><img src="imgs/wedding-cake-lemon.webp" alt="레몬 웨딩 케이크"
+              style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></div>
+          <div>
+            <div data-reveal
+              style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
+              Petit Mariage</div>
+            <h2 data-reveal
+              style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.3;letter-spacing:-.03em;font-size:clamp(28px,3.6vw,46px);margin:16px 0 0">
+              가까운 사람들과<br>나누는 작은 결혼식</h2>
+            <p data-reveal class="lead" style="margin:22px 0 0;color:var(--fg)">통창 가득 자연광이 드는 자리에서, 롱테이블 하나에 둘러앉아 코스를
+              나눕니다. 케이크를 자르고 잔을 부딪치는 순간까지—과하지 않게, 그러나 정성껏.</p>
+            <p data-reveal class="lead" style="margin:16px 0 0;color:var(--muted)">플라워·케이크·세팅은 그날의 자리에 맞춰 상의해 준비합니다. 별도의
+              예식 홀이 아닌, 한 상에서 이어지는 편안한 하루.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO / PRICING (green inverted) -->
+      <section id="info" style="background:var(--deep);color:var(--bg)">
+        <div style="max-width:1020px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
+          <div data-reveal
+            style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
+            Informations</div>
+          <h2 data-reveal
+            style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.3;letter-spacing:-.03em;font-size:clamp(28px,3.6vw,46px);margin:16px 0 0;color:var(--bg)">
+            대관 안내</h2>
+          <p data-reveal class="lead" style="margin:18px 0 0;color:rgba(247,243,234,.66);max-width:46ch">별도의 대관료 없이
+            <span style="color:var(--bg)">최소매출보장금액</span> 기준으로 운영합니다. 아래 금액 이상 이용 시 공간 전체를 대관해 드립니다.</p>
+
+          <div data-reveal style="margin-top:clamp(32px,4vw,48px);border-top:1px solid rgba(247,243,234,.22)">
+            <div
+              style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid rgba(247,243,234,.16)">
+              <div style="white-space:nowrap"><span
+                  style="font-family:'Hahmlet',serif;font-weight:600;font-size:19px;color:var(--bg)">주중</span> <span
+                  style="color:rgba(247,243,234,.6);font-size:14px">월–목</span></div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;color:var(--bg);white-space:nowrap">
+                150<span style="font-size:15px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div
+              style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid rgba(247,243,234,.16)">
+              <div style="white-space:nowrap"><span
+                  style="font-family:'Hahmlet',serif;font-weight:600;font-size:19px;color:var(--bg)">금요일</span></div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;color:var(--bg);white-space:nowrap">
+                170<span style="font-size:15px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div
+              style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid rgba(247,243,234,.16)">
+              <div style="white-space:nowrap"><span
+                  style="font-family:'Hahmlet',serif;font-weight:600;font-size:19px;color:var(--bg)">주말 · 공휴일</span>
+                <span style="color:rgba(247,243,234,.6);font-size:14px">런치</span></div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;color:var(--bg);white-space:nowrap">
+                230<span style="font-size:15px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div
+              style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid rgba(247,243,234,.16)">
+              <div style="white-space:nowrap"><span
+                  style="font-family:'Hahmlet',serif;font-weight:600;font-size:19px;color:var(--bg)">주말 · 공휴일</span>
+                <span style="color:rgba(247,243,234,.6);font-size:14px">디너</span></div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;color:var(--bg);white-space:nowrap">
+                200<span style="font-size:15px;color:var(--accent)"> 만원</span></div>
+            </div>
+          </div>
+
+          <div data-reveal
+            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(18px,2.4vw,30px);margin-top:clamp(32px,4vw,48px)">
+            <div style="border-top:2px solid var(--accent);padding-top:18px">
+              <div
+                style="font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">
+                Salle entière</div>
+              <div style="font-family:'Hahmlet',serif;font-weight:600;font-size:20px;margin-top:10px;color:var(--bg)">통창
+                전체 대관</div>
+              <p style="margin:6px 0 0;color:rgba(247,243,234,.66);font-size:15px">추가 차지 없음. 통창 앞 롱테이블을 포함한 공간 전체를 그대로
+                사용하실 수 있습니다.</p>
+            </div>
+            <div style="border-top:2px solid var(--accent);padding-top:18px">
+              <div
+                style="font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">
+                Menu</div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px;margin-top:8px;color:var(--bg)">
+                98,000 · 145,000<span style="font-size:14px;color:rgba(247,243,234,.6)"> 원</span></div>
+              <p style="margin:6px 0 0;color:rgba(247,243,234,.66);font-size:15px">1인 코스 기준. 코스 구성에 따라 애디셔널 차지가 있을 수
+                있습니다.</p>
+            </div>
+          </div>
+
+          <p data-reveal style="margin-top:clamp(28px,3.5vw,40px);color:rgba(247,243,234,.55);font-size:14px">최대 22–23명
+            · 예약 필수 · 스몰 웨딩과 상세 구성(플라워·케이크·세팅)은 문의 시 안내해 드립니다.</p>
+
+          <div data-reveal style="margin-top:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+            <a href="tel:0260321300"
+              style="background:var(--accent);color:var(--deep);border-radius:100px;padding:16px 32px;font-size:15px;font-weight:700;display:inline-block">대관
+              문의 · 02-6032-1300</a>
+            <a href="http://pf.kakao.com/_bxoRxoxj" target="_blank" rel="noopener"
+              style="color:var(--bg);font-size:15px;border-bottom:1px solid rgba(247,243,234,.45);padding-bottom:2px">카카오톡
+              채널로 문의하기</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOLJANCHI (first birthday) -->
+      <section id="doljanchi"
+        style="max-width:1020px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px) 0">
+        <div data-reveal
+          style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
+          Premier Anniversaire · 돌잔치</div>
+        <h2 data-reveal
+          style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.3;letter-spacing:-.03em;font-size:clamp(28px,3.6vw,46px);margin:16px 0 0">
+          돌잔치 안내</h2>
+        <p data-reveal class="lead" style="margin:18px 0 0;color:var(--muted);max-width:46ch">한 상에서 이어지는 코스로 준비합니다. 계절에
+          따라 일부 메뉴가 바뀔 수 있으며, 음료·주류는 별도입니다.</p>
+
+        <!-- 1. MENU -->
+        <div data-reveal
+          style="margin-top:clamp(36px,5vw,56px);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)">
+          01 · Menu · 돌잔치 메뉴 (1인)</div>
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(22px,3vw,40px);margin-top:22px">
+          <article data-reveal style="border-top:2px solid var(--fg);padding-top:20px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <h3 style="font-family:'Hahmlet',serif;font-weight:600;font-size:22px;margin:0">13만원 코스</h3>
+              <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">130,000</div>
+            </div>
+            <div style="margin-top:14px">
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">아뮤즈 부쉬 <span
+                  style="color:var(--muted)">(3종)</span></div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">식전빵 · 버터</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">리옹식 샐러드</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">프렌치 어니언 수프</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">금태구이 <span
+                  style="color:var(--muted)">아스파라거스 · 완두콩 소스</span></div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px"><span
+                  style="color:var(--accent);font-weight:700;font-size:11px;letter-spacing:.14em;margin-right:6px">MAIN</span>안심
+                스테이크 · 보르들레즈 소스</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">르꼬숑 디저트</div>
+              <div style="padding:11px 0;font-size:15.5px">프띠푸르 <span style="color:var(--muted)">미니 디저트 + 커피/차</span>
+              </div>
+            </div>
+          </article>
+          <article data-reveal style="border-top:2px solid var(--accent);padding-top:20px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <h3 style="font-family:'Hahmlet',serif;font-weight:600;font-size:22px;margin:0">17만원 코스</h3>
+              <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">170,000</div>
+            </div>
+            <div style="margin-top:14px">
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">아뮤즈 부쉬 <span
+                  style="color:var(--muted)">(3종)</span></div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">식전빵 · 버터</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">리옹식 샐러드</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">프렌치 어니언 수프</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">랍스터 테일 <span
+                  style="color:var(--muted)">크림치즈 · 브리오슈 · 비스크 소스 · 계절 변경 가능</span></div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">금태구이</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px"><span
+                  style="color:var(--accent);font-weight:700;font-size:11px;letter-spacing:.14em;margin-right:6px">MAIN</span>비프
+                웰링턴 · 보르들레즈 소스</div>
+              <div style="padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px">르꼬숑 디저트</div>
+              <div style="padding:11px 0;font-size:15.5px">프띠푸르</div>
+            </div>
+          </article>
+        </div>
+        <ul data-reveal style="margin:24px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;line-height:1.9">
+          <li>미취학 아동은 단품(파스타 또는 한우 안심 스테이크) 주문 가능 · 초등학생부터는 코스 이용</li>
+          <li>콜키지(돌잔치 기준) — 와인 1병 50,000원 / 위스키 1병 100,000원 (행사 당일 문의)</li>
+        </ul>
+
+        <!-- 2. TIME -->
+        <div data-reveal
+          style="margin-top:clamp(40px,6vw,64px);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)">
+          02 · Horaires · 대관 시간</div>
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2.4vw,30px);margin-top:22px">
+          <div data-reveal style="border-top:1px solid var(--hair);padding-top:18px">
+            <div style="font-family:'Hahmlet',serif;font-weight:600;font-size:20px">런치</div>
+            <div style="display:grid;grid-template-columns:96px 1fr;gap:8px 16px;margin-top:14px;font-size:15px">
+              <div style="color:var(--muted)">식사</div>
+              <div>12:00 (~12:30) ~ 14:30</div>
+              <div style="color:var(--muted)">돌상 준비</div>
+              <div>10:30 ~</div>
+              <div style="color:var(--muted)">실내 촬영</div>
+              <div>11:00 ~</div>
+            </div>
+          </div>
+          <div data-reveal style="border-top:1px solid var(--hair);padding-top:18px">
+            <div style="font-family:'Hahmlet',serif;font-weight:600;font-size:20px">디너</div>
+            <div style="display:grid;grid-template-columns:96px 1fr;gap:8px 16px;margin-top:14px;font-size:15px">
+              <div style="color:var(--muted)">식사</div>
+              <div>18:00 (~18:30) ~ 21:00</div>
+              <div style="color:var(--muted)">돌상 준비</div>
+              <div>16:30 ~ <span style="color:var(--muted)">(겨울 10월 중순~2월 16:00~)</span></div>
+              <div style="color:var(--muted)">실내 촬영</div>
+              <div>17:00 ~ <span style="color:var(--muted)">(겨울 16:30~)</span></div>
+            </div>
+          </div>
+        </div>
+        <ul data-reveal style="margin:20px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;line-height:1.9">
+          <li>디너는 협의 시 오후 4시부터 준비 가능</li>
+          <li>돌상 준비 시간에는 부모님과 돌상 세팅 업체만 입장 가능</li>
+          <li>하객 입장은 예약(식사) 시간 15분 전부터</li>
+        </ul>
+
+        <!-- 3. DEPOSIT -->
+        <div data-reveal
+          style="margin-top:clamp(40px,6vw,64px);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)">
+          03 · Acompte · 예약금 · 최소매출 보장</div>
+        <div data-reveal style="margin-top:20px;background:var(--deep);color:var(--bg);padding:clamp(22px,3vw,32px)">
+          <p style="margin:0;font-size:16px;line-height:1.7">예약금 = <span style="color:var(--accent)">(최소 매출 보장금액 또는 인원수
+              × 메뉴 가격 중 큰 금액)</span>의 <span style="font-family:'Cormorant Garamond',serif;font-size:19px">20%</span> ·
+            잔액은 행사 당일 결제</p>
+          <div
+            style="margin-top:18px;border-top:1px solid rgba(247,243,234,.2);padding-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:14px;font-size:14.5px">
+            <div>
+              <div style="color:rgba(247,243,234,.6)">주중 (월–목)</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:20px;margin-top:2px">150<span
+                  style="font-size:13px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div>
+              <div style="color:rgba(247,243,234,.6)">금요일</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:20px;margin-top:2px">170<span
+                  style="font-size:13px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div>
+              <div style="color:rgba(247,243,234,.6)">주말·공휴일 런치</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:20px;margin-top:2px">230<span
+                  style="font-size:13px;color:var(--accent)"> 만원</span></div>
+            </div>
+            <div>
+              <div style="color:rgba(247,243,234,.6)">주말·공휴일 디너</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:20px;margin-top:2px">200<span
+                  style="font-size:13px;color:var(--accent)"> 만원</span></div>
+            </div>
+          </div>
+        </div>
+        <ul data-reveal style="margin:20px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;line-height:1.9">
+          <li>최소 매출 미달 시 차액은 와인 구매 및 르꼬숑 기프트카드(20만원 한도) 충전으로 채울 수 있습니다</li>
+          <li>입금 시 예약자명 = 입금자명, 이름 옆에 예약 날짜 4자리를 기입해 주세요</li>
+        </ul>
+        <div data-reveal style="margin-top:16px;border:1px solid var(--hair);padding:16px 20px;font-size:15px">
+          <span style="color:var(--muted);font-size:13px;letter-spacing:.1em;text-transform:uppercase">입금 계좌</span><br>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px">신한은행 140-013-804087</span> <span
+            style="color:var(--muted)">예금주 ㈜하이쉐프테인먼트</span>
+        </div>
+
+        <!-- 4. REFUND -->
+        <div data-reveal
+          style="margin-top:clamp(40px,6vw,64px);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)">
+          04 · Annulation · 환불 규정</div>
+        <div data-reveal style="margin-top:20px;border-top:1px solid var(--hair)">
+          <div
+            style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--hair);font-size:15.5px">
+            <span>행사 90일 전까지</span><span style="color:var(--fg)">계약금 전액 환불</span></div>
+          <div
+            style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--hair);font-size:15.5px">
+            <span>90일 미만 ~ 60일 전</span><span>계약금 50% 환불</span></div>
+          <div
+            style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--hair);font-size:15.5px">
+            <span>60일 미만 ~ 30일 전</span><span>계약금 30% 환불</span></div>
+          <div
+            style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--hair);font-size:15.5px">
+            <span>30일 미만</span><span style="color:var(--accent)">환불 불가</span></div>
+        </div>
+        <p data-reveal style="margin:14px 0 0;color:var(--muted);font-size:14px">신한은행 외 타행 환불 시 송금 수수료 500원이 차감됩니다.</p>
+
+        <!-- 5. ETC -->
+        <div data-reveal
+          style="margin-top:clamp(40px,6vw,64px);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)">
+          05 · Divers · 기타 안내</div>
+        <ul data-reveal style="margin:18px 0 0;padding-left:18px;color:var(--fg);font-size:15.5px;line-height:1.95">
+          <li>촬영 스팟 — 창덕궁 · 운현궁 도보 2~5분</li>
+          <li>돌상 제휴 업체 4곳 — 내리사랑 · 시시호일 · 더돌상 · 나린돌상 <span style="color:var(--muted)">(제휴 외 반입 시 반입비 220,000원)</span>
+          </li>
+          <li>주차 3~4대 (업체 차량 포함) · 부족 시 옆 현대사옥 유료 주차</li>
+          <li>인원 변동은 최소 1주일 전 카카오톡으로 알려 주세요 <span style="color:var(--muted)">(미통보 시 준비 메뉴 전량 결제)</span></li>
+          <li>뷔페가 아닌 코스로 제공됩니다</li>
+        </ul>
+
+        <!-- 6. NOTICE -->
+        <div data-reveal
+          style="margin-top:clamp(32px,4vw,48px);border-left:2px solid var(--accent);padding:14px 20px;background:rgba(176,141,79,.07)">
+          <div
+            style="font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">
+            주의</div>
+          <p style="margin:0;font-size:15px;color:var(--fg)">1층 프릳츠 카페 주변은 아라리오 임대 공간으로 르꼬숑 전용이 아닙니다. 실외 스냅 촬영 시 다른 방문객의
+            동선에 유의해 주세요.</p>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
+        <div data-reveal
+          style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
+          Galerie</div>
+        <h2 data-reveal
+          style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.3;letter-spacing:-.03em;font-size:clamp(28px,3.6vw,46px);margin:16px 0 clamp(32px,4vw,48px)">
+          그날의 자리</h2>
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(14px,2vw,22px)">
+          <img data-reveal src="imgs/wedding-long-table.webp" alt="롱테이블 전체 세팅"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-table-flowers.webp" alt="테이블 화이트 플라워 러너"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-cake-cutting.webp" alt="케이크 커팅"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-glass-detail.webp" alt="샴페인 글라스 디테일"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-flowers-white.webp" alt="화이트 플라워 오브제"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-bouquet.webp" alt="노란 부케"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-table-setting.webp" alt="테이블 세팅 디테일"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+          <img data-reveal src="imgs/wedding-table-window.webp" alt="창가 롱테이블"
+            style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" />
+        </div>
+        <p data-reveal style="margin-top:24px;color:var(--muted);font-size:13.5px">※ 실제 진행된 스몰 웨딩의 기록입니다. 게재에 동의를 받은 사진만
+          사용합니다.</p>
+      </section>
+
+      <!-- FOOTER -->
+      <footer style="background:var(--deep);color:var(--bg)">
+        <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(22px,5vw,80px)">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px">
+            <a href="index.html"><img src="imgs/le_cochon_logo.svg" alt="Le Cochon"
+                style="display:block;width:130px;height:auto;filter:brightness(0) invert(1) sepia(14%) saturate(140%) hue-rotate(354deg) brightness(1.02)" /></a>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
+              <a href="https://app.catchtable.co.kr/ct/shop/lecochon" target="_blank" rel="noopener"
+                style="background:var(--accent);color:var(--deep);border-radius:100px;padding:13px 26px;font-size:14px;font-weight:700">캐치테이블
+                예약</a>
+              <a href="https://m.booking.naver.com/booking/6/bizes/70637/items/3685525?theme=place&service-target=map-pc&lang=ko&area=pll"
+                target="_blank" rel="noopener"
+                style="border:1px solid rgba(247,243,234,.34);color:var(--bg);border-radius:100px;padding:13px 26px;font-size:14px;font-weight:600">네이버
+                예약</a>
+            </div>
+          </div>
+          <div
+            style="margin-top:32px;border-top:1px solid rgba(247,243,234,.18);padding-top:22px;color:rgba(247,243,234,.72);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+            <span>서울 종로구 율곡로 83, 3층 · 02-6032-1300</span>
+            <a href="index.html" style="color:var(--accent)">← 홈으로</a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- SCROLL TO TOP -->
+      <button id="lc-top" type="button" aria-label="맨 위로"
+        style="position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:120;width:52px;height:52px;border:none;border-radius:100px;background:var(--deep);color:var(--bg);cursor:pointer;box-shadow:0 10px 30px rgba(32,52,42,.28);opacity:0;pointer-events:none;transition:opacity .35s ease;display:flex;align-items:center;justify-content:center"><span
+          style="font-size:22px;line-height:1;transform:translateY(-1px)">↑</span></button>
+
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const nav = document.getElementById('lc-nav');
+    const onScroll = () => {
+      if (!nav) return;
+      const s = window.scrollY > 40;
+      nav.style.background = s ? 'rgba(247,243,234,0.94)' : 'rgba(247,243,234,0)';
+      nav.style.borderBottomColor = s ? 'rgba(32,52,42,0.18)' : 'rgba(32,52,42,0)';
+      nav.style.backdropFilter = s ? 'saturate(120%) blur(8px)' : 'none';
+      nav.style.webkitBackdropFilter = s ? 'saturate(120%) blur(8px)' : 'none';
+      const top = document.getElementById('lc-top');
+      if (top) { const show = window.scrollY > 400; top.style.opacity = show ? '1' : '0'; top.style.pointerEvents = show ? 'auto' : 'none'; }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    this._onScroll = onScroll;
+    const topBtn = document.getElementById('lc-top');
+    if (topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const ease = 'cubic-bezier(.22,1,.36,1)';
+    els.forEach((el) => {
+      const p = el.parentElement;
+      const sibs = p ? Array.from(p.querySelectorAll(':scope > [data-reveal]')) : [el];
+      const i = Math.max(0, sibs.indexOf(el));
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(34px)';
+      el.style.transition = 'opacity .9s ' + ease + ', transform .9s ' + ease;
+      el.style.transitionDelay = (i * 80) + 'ms';
+    });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((e) => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach((el) => io.observe(el));
+    this._io = io;
+  }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+
+</html>
