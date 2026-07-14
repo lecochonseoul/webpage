@@ -50,7 +50,7 @@
     </helmet>
 
     <div id="lc-root"
-      style="--bg:#F7F3EA;--deep:#20342A;--accent:#B08D4F;--fg:#2B2622;--muted:rgba(43,38,34,.60);--hair:rgba(32,52,42,.18);background:var(--bg);color:var(--fg);font-family:'Pretendard Variable',system-ui,sans-serif;font-size:17px;line-height:1.85;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden">
+      style="--bg:#F7F3EA;--deep:#20342A;--accent:#B08D4F;--fg:#2B2622;--muted:rgba(43,38,34,.60);--hair:rgba(32,52,42,.18);background:var(--bg);color:var(--fg);font-family:'Pretendard Variable',system-ui,sans-serif;font-size:17px;line-height:1.85;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:clip">
 
       <nav id="lc-nav"
         style="position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(32,52,42,0);transition:background .4s ease,border-color .4s ease">
@@ -91,8 +91,16 @@
       <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(22px,5vw,80px)">
         <div
           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:start">
-          <div data-reveal><img src="imgs/signature-boeuf-bourguignon.webp" alt="Parisien Déjeuner 코스 — 뵈프 부르기뇽"
-              style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></div>
+          <div data-reveal style="align-self:stretch">
+            <div style="position:sticky;top:96px"><img id="course-img-1"
+                data-default="imgs/signature-boeuf-bourguignon.webp" src="imgs/signature-boeuf-bourguignon.webp"
+                alt="Parisien Déjeuner 코스 — 뵈프 부르기뇽"
+                style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:opacity .35s ease" />
+              <div data-cap
+                style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--muted);margin-top:12px;min-height:1.2em;transition:opacity .3s ease">
+                메뉴 이름에 마우스를 올리면 사진이 바뀝니다</div>
+            </div>
+          </div>
           <div>
             <div
               style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--hair);padding-bottom:18px">
@@ -202,8 +210,16 @@
         <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
           <div
             style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:start">
-            <div style="order:2" data-reveal><img src="imgs/signature-beef-wellington.webp" alt="Vert 코스 — 비프 웰링턴"
-                style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></div>
+            <div style="order:2;align-self:stretch" data-reveal>
+              <div style="position:sticky;top:96px"><img id="course-img-2"
+                  data-default="imgs/signature-beef-wellington.webp" src="imgs/signature-beef-wellington.webp"
+                  alt="Vert 코스 — 비프 웰링턴"
+                  style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:opacity .35s ease" />
+                <div data-cap
+                  style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(247,243,234,.6);margin-top:12px;min-height:1.2em;transition:opacity .3s ease">
+                  메뉴 이름에 마우스를 올리면 사진이 바뀝니다</div>
+              </div>
+            </div>
             <div style="order:1">
               <div
                 style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid rgba(247,243,234,.22);padding-bottom:18px">
@@ -344,8 +360,15 @@
       <section style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
         <div
           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:start">
-          <div data-reveal><img src="imgs/course-03-noir-lobster.webp" alt="Noir 코스"
-              style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></div>
+          <div data-reveal style="align-self:stretch">
+            <div style="position:sticky;top:96px"><img id="course-img-3" data-default="imgs/course-03-noir-lobster.webp"
+                src="imgs/course-03-noir-lobster.webp" alt="Noir 코스 — 버터 포치드 랍스터"
+                style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:opacity .35s ease" />
+              <div data-cap
+                style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--muted);margin-top:12px;min-height:1.2em;transition:opacity .3s ease">
+                메뉴 이름에 마우스를 올리면 사진이 바뀝니다</div>
+            </div>
+          </div>
           <div>
             <div
               style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--hair);padding-bottom:18px">
@@ -551,6 +574,62 @@ class Component extends DCLogic {
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     els.forEach((el) => io.observe(el));
     this._io = io;
+    this._wireHover();
+  }
+  _wireHover() {
+    const map = [
+      ["hors d'oeuvres", 'imgs/signature-amuse-bouche.webp'],
+      ['Salade Lyonnaise', 'imgs/course-01-parisien-salade.webp'],
+      ['French Onion Soup', 'imgs/signature-onion-soup.webp'],
+      ['Bourguignon', 'imgs/signature-boeuf-bourguignon.webp'],
+      ['Blackthroat', 'imgs/course-02-vert-poisson.webp'],
+      ['Scallop Grill', 'imgs/dish-scallop-grill.jpg'],
+      ['Roasted Duck', 'imgs/dish-roasted-duck.jpg'],
+      ['Escargot', 'imgs/signature-escargot.webp'],
+      ['lamb chop', 'imgs/signature-lamb-chop.webp'],
+      ['Pork neck', 'imgs/signature-pork-steak.webp'],
+      ['Wellington', 'imgs/signature-beef-wellington.webp'],
+      ['Butter-poached lobster', 'imgs/course-03-noir-lobster.webp'],
+      ['Seasonal main dessert', 'imgs/signature-dessert.webp'],
+      ['Petit four', 'imgs/gallery-coffee.webp'],
+    ];
+    const sections = Array.from(document.querySelectorAll('#course-img-1, #course-img-2, #course-img-3')).map((img) => img.closest('section'));
+    sections.forEach((sec) => {
+      if (!sec) return;
+      const img = sec.querySelector('img[id^="course-img"]');
+      const cap = sec.querySelector('[data-cap]');
+      const defSrc = img.getAttribute('data-default');
+      const defCap = cap ? cap.textContent : '';
+      const names = Array.from(sec.querySelectorAll('div')).filter((d) => {
+        const cs = getComputedStyle(d);
+        return cs.fontFamily.indexOf('Cormorant') !== -1 && cs.fontSize === '18px' && d.children.length <= 2;
+      });
+      names.forEach((nameEl) => {
+        const txt = (nameEl.textContent || '').toLowerCase();
+        const hit = map.find((m) => txt.includes(m[0].toLowerCase()));
+        if (!hit) return;
+        const row = nameEl.parentElement;
+        const enName = nameEl.textContent.replace(/\+[\d,]+|Optional.*$/g, '').trim();
+        row.style.cursor = 'pointer';
+        row.style.transition = 'opacity .2s ease';
+        const show = () => {
+          if (img.getAttribute('src') === hit[1]) return;
+          img.style.opacity = '0';
+          setTimeout(() => { img.setAttribute('src', hit[1]); img.style.opacity = '1'; }, 160);
+          if (cap) cap.textContent = enName;
+        };
+        const reset = () => {
+          img.style.opacity = '0';
+          setTimeout(() => { img.setAttribute('src', defSrc); img.style.opacity = '1'; }, 160);
+          if (cap) cap.textContent = defCap;
+        };
+        row.addEventListener('mouseenter', show);
+        row.addEventListener('mouseleave', reset);
+        row.addEventListener('focusin', show);
+        row.addEventListener('click', show);
+        row.setAttribute('tabindex', '0');
+      });
+    });
   }
   componentWillUnmount() {
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
