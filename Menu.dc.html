@@ -56,7 +56,7 @@
         style="position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(32,52,42,0);transition:background .4s ease,border-color .4s ease">
         <div
           style="max-width:1180px;margin:0 auto;padding:14px clamp(22px,5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:24px">
-          <a href="index.html" aria-label="Le Cochon" style="display:block;flex:none"><img src="imgs/le_cochon_logo.svg"
+          <a href="index.html" aria-label="Le Cochon" style="display:block;flex:none"><img src="imgs/le_cochon_logo.png"
               alt="Le Cochon" style="display:block;width:104px;height:auto" /></a>
           <div
             style="display:flex;align-items:center;gap:clamp(16px,2.4vw,30px);flex-wrap:wrap;justify-content:flex-end">
@@ -211,9 +211,8 @@
           <div
             style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:start">
             <div style="order:2;align-self:stretch" data-reveal>
-              <div style="position:sticky;top:96px"><img id="course-img-2"
-                  data-default="imgs/signature-beef-wellington.webp" src="imgs/signature-beef-wellington.webp"
-                  alt="Vert 코스 — 비프 웰링턴"
+              <div style="position:sticky;top:96px"><img id="course-img-2" data-default="imgs/dish-beef-wellington.png"
+                  src="imgs/dish-beef-wellington.png" alt="Vert 코스 — 비프 웰링턴"
                   style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:opacity .35s ease" />
                 <div data-cap
                   style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(247,243,234,.6);margin-top:12px;min-height:1.2em;transition:opacity .3s ease">
@@ -361,8 +360,8 @@
         <div
           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div data-reveal style="align-self:stretch">
-            <div style="position:sticky;top:96px"><img id="course-img-3" data-default="imgs/course-03-noir-lobster.webp"
-                src="imgs/course-03-noir-lobster.webp" alt="Noir 코스 — 버터 포치드 랍스터"
+            <div style="position:sticky;top:96px"><img id="course-img-3" data-default="imgs/dish-lobster.png"
+                src="imgs/dish-lobster.png" alt="Noir 코스 — 버터 포치드 랍스터"
                 style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:opacity .35s ease" />
               <div data-cap
                 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--muted);margin-top:12px;min-height:1.2em;transition:opacity .3s ease">
@@ -525,7 +524,7 @@
       <footer style="background:var(--deep);color:var(--bg)">
         <div
           style="max-width:1180px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(22px,5vw,80px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px">
-          <a href="index.html"><img src="imgs/le_cochon_logo.svg" alt="Le Cochon"
+          <a href="index.html"><img src="imgs/le_cochon_logo.png" alt="Le Cochon"
               style="display:block;width:130px;height:auto;filter:brightness(0) invert(1) sepia(14%) saturate(140%) hue-rotate(354deg) brightness(1.02)" /></a>
           <div style="color:rgba(247,243,234,.72);font-size:14px;text-align:right;line-height:1.8">서울 종로구 율곡로 83, 3층 ·
             02-6032-1300<br><a href="index.html" style="color:var(--accent)">← 홈으로</a></div>
@@ -588,10 +587,12 @@ class Component extends DCLogic {
       ['Escargot', 'imgs/signature-escargot.webp'],
       ['lamb chop', 'imgs/signature-lamb-chop.webp'],
       ['Pork neck', 'imgs/signature-pork-steak.webp'],
-      ['Wellington', 'imgs/signature-beef-wellington.webp'],
-      ['Butter-poached lobster', 'imgs/course-03-noir-lobster.webp'],
+      ['filet mignon', 'imgs/dish-beef-filet.png'],
+      ['Wellington', 'imgs/dish-beef-wellington.png'],
+      ['Butter-poached lobster', 'imgs/dish-lobster.png'],
       ['Seasonal main dessert', 'imgs/signature-dessert.webp'],
-      ['Petit four', 'imgs/gallery-coffee.webp'],
+      ['Coffee or Tea', 'imgs/dish-tea-coffee.png'],
+      ['Petit four', 'imgs/dish-tea-coffee.png'],
     ];
     const sections = Array.from(document.querySelectorAll('#course-img-1, #course-img-2, #course-img-3')).map((img) => img.closest('section'));
     sections.forEach((sec) => {
@@ -608,14 +609,16 @@ class Component extends DCLogic {
         const txt = (nameEl.textContent || '').toLowerCase();
         const hit = map.find((m) => txt.includes(m[0].toLowerCase()));
         if (!hit) return;
+        let hitSrc = hit[1];
+        if (img.id === 'course-img-2' && txt.includes('coffee or tea')) hitSrc = 'imgs/gallery-coffee.webp';
         const row = nameEl.parentElement;
         const enName = nameEl.textContent.replace(/\+[\d,]+|Optional.*$/g, '').trim();
         row.style.cursor = 'pointer';
         row.style.transition = 'opacity .2s ease';
         const show = () => {
-          if (img.getAttribute('src') === hit[1]) return;
+          if (img.getAttribute('src') === hitSrc) return;
           img.style.opacity = '0';
-          setTimeout(() => { img.setAttribute('src', hit[1]); img.style.opacity = '1'; }, 160);
+          setTimeout(() => { img.setAttribute('src', hitSrc); img.style.opacity = '1'; }, 160);
           if (cap) cap.textContent = enName;
         };
         const reset = () => {
