@@ -61,7 +61,7 @@
           <div
             style="display:flex;align-items:center;gap:clamp(16px,2.4vw,30px);flex-wrap:wrap;justify-content:flex-end">
             <a href="index.html" style="color:var(--fg);font-size:14px;font-weight:500">홈</a>
-            <a href="Wine.dc.html" style="color:var(--fg);font-size:14px;font-weight:500">와인</a>
+            <a href="Wine.html" style="color:var(--fg);font-size:14px;font-weight:500">와인</a>
             <a href="https://app.catchtable.co.kr/ct/shop/lecochon" target="_blank" rel="noopener"
               style="background:var(--deep);color:var(--bg);border-radius:100px;padding:11px 20px;font-size:13px;font-weight:600">캐치테이블</a>
             <a href="https://m.booking.naver.com/booking/6/bizes/70637/items/3685525?theme=place&service-target=map-pc&lang=ko&area=pll"
@@ -513,7 +513,7 @@
               target="_blank" rel="noopener"
               style="background:var(--accent);color:var(--deep);border-radius:100px;padding:16px 30px;font-size:15px;font-weight:700">네이버
               예약</a>
-            <a href="Wine.dc.html"
+            <a href="Wine.html"
               style="border:1px solid rgba(43,38,34,.28);color:var(--fg);border-radius:100px;padding:16px 32px;font-size:15px;font-weight:600">와인
               리스트 →</a>
           </div>
@@ -611,6 +611,10 @@ class Component extends DCLogic {
         if (!hit) return;
         let hitSrc = hit[1];
         if (img.id === 'course-img-2' && txt.includes('coffee or tea')) hitSrc = 'imgs/gallery-coffee.webp';
+        if (txt.includes('seasonal main dessert')) {
+          const perCourse = { 'course-img-1': 'imgs/dish-dessert-1.png', 'course-img-2': 'imgs/dish-dessert-2.png', 'course-img-3': 'imgs/dish-dessert-3.png' };
+          hitSrc = perCourse[img.id] || hitSrc;
+        }
         const row = nameEl.parentElement;
         const enName = nameEl.textContent.replace(/\+[\d,]+|Optional.*$/g, '').trim();
         row.style.cursor = 'pointer';
