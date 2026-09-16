@@ -223,7 +223,7 @@ class Component extends DCLogic {
     const sections = [
       S('Champagne', '샴페인', [
         ['Bernard Bijotat, Blanc de Blancs', '샹파뉴 베르나르 비죠따 블랑 드 블랑 NV', 'France · Chardonnay 100%', '240,000'],
-        ['Bernard Bijotat, 3 Cépages', '샹파뉴 베르나르 비죠따 트와 쎄빠쥐 NV', 'France · Chardonnay · Pinot Noir · Pinot Meunier', '240,000'],
+        ['Bernard Bijotat, 3 Cépages', '샹파뉴 베르나르 비죠따 트와 쎄빠쥐 NV', 'France · Chardonnay ⅓ · Pinot Noir ⅓ · Pinot Meunier ⅓', '240,000'],
         ['Dauby Réserve Brut, Premier Cru', '샹파뉴 도비 리저브 브뤼 프리미에 크뤼', 'France · Pinot Noir 60% · Chardonnay 40%', '150,000'],
         ['Dauby Blanc de Noir Brut, Premier Cru', '샹파뉴 도비 블랑 드 누아 브뤼 프리미에 크뤼', 'France · Pinot Noir 100%', '173,000'],
         ['Barrat Masson, Les Margannes, Brut Nature', '샹파뉴 바랏 마쏭 레 마르간느 브뤼 나뛰르', 'France · Chardonnay 100%', '223,000'],
@@ -242,8 +242,10 @@ class Component extends DCLogic {
       ]),
       S('France White', '프랑스 화이트', [
         ['Chablis 1er Cru, Château de Fleys – Mont de Milieu', '부르고뉴 AOP 샤블리 프리미어 크뤼 샤또 드 프레이 몽 드 밀리유', 'France · Chardonnay 100%', '192,000'],
+        ['La Meulière, Chablis', '부르고뉴 라 밀리에 샤블리', 'France · Chardonnay 100%', '120,000'],
+        ['Domaine de la Denante, Bourgogne Chardonnay', '부르고뉴 도멘 드 라 드낭트 샤도네이', 'France · Chardonnay 100%', '110,000'],
+        ['Domaine Saint Jean, Grande Réserve Blanc', '랑그독 도멘 생장 그랑 리저브 블랑', 'France · Chardonnay 100%', '80,000'],
         ['Aligoté, Domaine Pansiot', '부르고뉴 AOP 도멘 팡시오 알리고떼', 'France · Aligoté 100%', '99,000'],
-        ['Domaine Bègue Mathiot, Chablis 1er Cru, Vaillons', '부르고뉴 도멘 베그 마티오 샤블리 프리미에 크뤼 바이용', 'France · Chardonnay 100%', '123,000'],
         ['Domaine Nudant, Meursault', '부르고뉴 도멘 뉘당 뫼르소', 'France · Chardonnay 100%', '252,000'],
         ['Trois 7 White, Domaine de la Garnaude', '프로방스 AOP 도멘 드 라 가르노드 트와 7 화이트', 'France · Rolle 100%', '90,000'],
         ['Crozes-Hermitage, Les Belles Âmes White', '꼬뜨 뒤 론 AOP 크로제 에르미따쥐 레 벨 잠므', 'France · Marsanne 70% · Roussanne 30%', '197,000'],
@@ -254,7 +256,8 @@ class Component extends DCLogic {
       S('Global White', '글로벌 화이트', [
         ['Weingut Wegeler, Bernkasteler Trocken', '바인굿 베겔러 베른카스텔러 트로켄', 'Germany · Riesling 100%', '90,000'],
         ['Weingut Winter, Dittelsheim Riesling G.G. Leckerberg', '바인굿 빈터 레커베르그', 'Germany · Riesling 100%', '195,000'],
-        ['Graci, Etna Bianco', '그라치 에트나 비앙코', 'Italy · Carricante 70% · Cataratto 30%', '102,000'],
+        ['Graci, Etna Bianco', '그라치 에트나 비앙코', 'Italy · Carricante 70% · Catarratto 30%', '102,000'],
+        ['Curious, Chardonnay, Petaluma Gap AVA', '미국 소노마 카운티 큐리어스 샤도네이', 'USA · Chardonnay 100%', '110,000'],
       ]),
       S('France Red · Bordeaux', '프랑스 레드 · 보르도', [
         ['Médoc Cru Bourgeois, Château la Pirouette', '보르도 메독 크뤼 부르주아 샤또 라 피루엣뜨', 'France · Cabernet Sauvignon 50% · Merlot 45% · Petit Verdot 5%', '90,000'],
@@ -283,6 +286,7 @@ class Component extends DCLogic {
         ['Côte-Rôtie, Domaine Gallet', '꼬뜨 뒤 론 AOP 꼬뜨 로티 도멘 갈레', 'France · Syrah 95% · Viognier 5%', '240,000'],
         ['Domaine du Prince, Cahors Malbec', '도멘 뒤 프린스 르 셴 뒤 프린스 카오르 말벡', 'France · Malbec 100%', '90,000'],
         ['Le Petit Balthazar, Merlot', '르 쁘띠 발타자르 메를로', 'France · Merlot 100%', '80,000'],
+        ['Domaine Saint Jean, Grande Réserve Rouge', '랑그독 도멘 생장 그랑 리저브 루지', 'France · Merlot · Syrah', '80,000'],
       ]),
       S('Global Red', '글로벌 레드', [
         ['Tenuta Casenuove, Chianti Classico Riserva', '이탈리아 DOCG 떼누타 카세누오베 키안티 클라시코 리제르바', 'Italy · Sangiovese 100%', '150,000'],
@@ -292,8 +296,8 @@ class Component extends DCLogic {
         ['Angus, Porterhouse Shiraz', '앵거스 포터하우스 쉬라즈', 'Australia · Shiraz 100%', '99,000'],
       ]),
       S('Selection by Glass', '글라스 · 페어링', [
-        ['By the Glass — Lunch', '런치 글라스', 'Sparkling · White · Red · Non-Alcoholic', '14,000'],
-        ['By the Glass — Dinner', '디너 글라스', 'Sparkling · White · Red · Non-Alcoholic', '18,000'],
+        ['Selection by Glass — Lunch', '런치', 'Sparkling · White · Red · Non-Alcoholic Wine (Sparkling, Red, White)', '14,000'],
+        ['Selection by Glass — Dinner', '디너', 'Sparkling · White · Red · Non-Alcoholic Wine (Sparkling, Red, White)', '18,000'],
         ['Sommelier Pairing, 3 Glasses', '소믈리에 페어링 3잔', '', '54,000'],
         ['Sommelier Pairing, 4 Glasses', '소믈리에 페어링 4잔', '', '68,000'],
       ]),
@@ -301,8 +305,10 @@ class Component extends DCLogic {
         ['Balvenie — Glass', '발베니 글라스', '', '23,000'],
         ['Woodford Reserve — Glass', '우드포드 리저브 글라스', '', '23,000'],
       ]),
-      S('Beer & Drinks', '맥주 · 음료', [
-        ['Estrella Damm Inedit', '에스트렐라 담 이네딧', 'Beer', '16,000'],
+      S('Beer', '맥주', [
+        ['Estrella Damm Inedit', '에스트렐라 담 이네딧', '', '16,000'],
+      ]),
+      S('Drinks', '음료', [
         ['Singha Soda Water', '싱하 탄산수', '', '9,000'],
         ['San Pellegrino — Lemon', '산펠레그리노 레몬', '', '9,000'],
         ['San Pellegrino — Grapefruit', '산펠레그리노 자몽', '', '9,000'],
