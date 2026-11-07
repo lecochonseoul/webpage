@@ -12,7 +12,7 @@
     <helmet>
       <title>와인 — 르꼬숑 Le Cochon | La Cave</title>
       <meta name="description"
-        content="르꼬숑 와인 리스트 — 샴페인·부르고뉴·보르도를 중심으로 한 셀렉션과 소믈리에 페어링. 리스트에 없는 와인도 미리 말씀해 주시면 구해 옵니다. French Cuisine, une table à Seoul.">
+        content="르꼬숑 와인 리스트 — 샴페인·부르고뉴·보르도를 중심으로 한 셀렉션. 리스트에 없는 와인도 미리 말씀해 주시면 구해 옵니다. French Cuisine, une table à Seoul.">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link
@@ -105,7 +105,7 @@
         </div>
       </section>
 
-      <!-- PAIRING -->
+      <!-- GLASS -->
       <section style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,5vw,80px)">
         <div
           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,5vw,72px);align-items:center">
@@ -114,30 +114,23 @@
           <div>
             <div data-reveal
               style="font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)">
-              Accord Mets &amp; Vins</div>
+              Selection by Glass</div>
             <h2 data-reveal
               style="font-family:'Hahmlet',serif;font-weight:600;line-height:1.3;letter-spacing:-.03em;font-size:clamp(30px,3.6vw,48px);margin:16px 0 0">
-              소믈리에 페어링</h2>
-            <p data-reveal class="lead" style="margin:20px 0 0;color:var(--fg)">코스에 맞춰 소믈리에가 잔을 고릅니다.<br>원하시면 논알코올
-              페어링으로도 준비합니다.</p>
+              글라스 와인</h2>
+            <p data-reveal class="lead" style="margin:20px 0 0;color:var(--fg)">화이트와 레드, 논알코올 와인을 잔으로 즐기실 수 있습니다.<br>런치와 디너 가격은 같습니다.</p>
             <div data-reveal style="margin-top:28px;border-top:1px solid var(--hair)">
               <div
                 style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair)">
-                <div><span style="font-family:'Hahmlet',serif;font-weight:600;font-size:18px">페어링</span> <span
-                    style="color:var(--muted);font-size:15px">3잔</span></div>
-                <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">54,000</div>
-              </div>
-              <div
-                style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair)">
-                <div><span style="font-family:'Hahmlet',serif;font-weight:600;font-size:18px">페어링</span> <span
-                    style="color:var(--muted);font-size:15px">4잔</span></div>
-                <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">68,000</div>
+                <div><span style="font-family:'Hahmlet',serif;font-weight:600;font-size:18px">글라스</span> <span
+                    style="color:var(--muted);font-size:15px">1잔</span></div>
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">16,000</div>
               </div>
               <div
                 style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair)">
                 <div><span style="font-family:'Hahmlet',serif;font-weight:600;font-size:18px">글라스</span> <span
-                    style="color:var(--muted);font-size:15px">1잔 / 2잔 이상 잔당</span></div>
-                <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">16,000 / 15,000</div>
+                    style="color:var(--muted);font-size:15px">2잔 이상 · 화이트 레드 · 잔당</span></div>
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px">15,000</div>
               </div>
             </div>
           </div>
@@ -290,11 +283,9 @@ class Component extends DCLogic {
         ['Boschi dei Signori, Barolo 2021', '보시오 보스키 데이 시뇨리 바롤로', 'Italy · Nebbiolo', '114,000'],
         ['Tenuta Casenuove, Chianti Classico Riserva 2018', '테누따 카제누에베 끼안띠 리제르바', 'Italy · Sangiovese', '150,000'],
       ]),
-      S('Selection by Glass', '글라스 · 페어링', [
+      S('Selection by Glass', '글라스 · 런치 디너 동일', [
         ['Selection by Glass', '1잔', 'White · Red · Non-Alcoholic Wine (Red, White)', '16,000'],
-        ['Selection by Glass', '2잔 이상 · 잔당', 'White · Red · Non-Alcoholic Wine (Red, White)', '15,000'],
-        ['Sommelier Pairing, 3 Glasses', '소믈리에 페어링 3잔', '', '54,000'],
-        ['Sommelier Pairing, 4 Glasses', '소믈리에 페어링 4잔', '', '68,000'],
+        ['Selection by Glass', '2잔 이상 · 잔당', 'White · Red', '15,000'],
       ]),
       S('Whisky', '위스키', [
         ['Balvenie — Glass', '발베니 글라스', '', '23,000'],
